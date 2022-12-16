@@ -29,7 +29,9 @@ const Photos = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://gallery-app-server.vercel.app/photos${sort}`)
+    fetch(
+      `https://gallery-app-server.vercel.app/photos?_sort=id&_order=${sort}`
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
@@ -43,7 +45,7 @@ const Photos = () => {
         setError(err);
       });
     if (search) {
-      fetch(`https://gallery-app-server.vercel.app/photos${search}`)
+      fetch(`https://gallery-app-server.vercel.app/photos?q=${search}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.error) {
