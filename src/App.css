@@ -2,22 +2,22 @@
   margin: 0px;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: #fafafa;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #5eb9f6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .navbar {
   width: 100vw;
   padding: 40px;
   text-align: center;
-  background-color: #ffffff;
-  border-bottom: 2px solid #dbdbdb;
+  background-color: #0abdca;
+  border-bottom: 3px solid #262626;
 }
 
 .navbar > a {
   color: #262626;
-  background-color: #ffffff;
+  background-color: #0abdca;
   font-size: large;
   font-weight: 400;
   margin: 0px 10px;
@@ -32,16 +32,21 @@
   margin-bottom: 20px;
 }
 
-.studentName, .studentId {
-  background-color: #fff;
+.studentName,
+.studentId {
+  background-color: #0abdca;
 }
 
-.home, .not-found {
+.home,
+.not-found,
+.pesan {
   width: 100vw;
   height: calc(100vh - 170px);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -90,7 +95,7 @@
   padding: 12px;
 }
 
-.captions{
+.captions {
   font-size: 14px;
   background-color: #fff;
   margin-bottom: 12px;
@@ -108,7 +113,7 @@
 .edit-btn > a {
   background-color: #fff;
   text-decoration: none;
-  color: #5eb9f6
+  color: #0b5f97;
 }
 
 .delete-btn {
@@ -116,11 +121,12 @@
   padding: 6px 0px;
   font-size: medium;
   background-color: #fff;
-  color: #ff3140;
+  color: #ee0616;
   cursor: pointer;
 }
 
-.edit-form, .add-form {
+.edit-form,
+.add-form {
   display: flex;
   flex-direction: column;
 }
@@ -131,7 +137,8 @@ label {
   width: 100%;
 }
 
-.edit-input, .add-input {
+.edit-input,
+.add-input {
   width: 100%;
   margin-top: 10px;
   border: 1px solid #dbdbdb;
@@ -142,13 +149,44 @@ label {
 }
 
 .submit-btn {
-  width: 100%;
-  color: #fff;
-  font-size: medium;
-  border: 1px solid #dbdbdb;
-  height: 40px;
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #0abdca;
   border-radius: 6px;
-  background-color: #5eb9f6;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Ubuntu, sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all 0.2s, box-shadow 0.08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.submit-btn:disabled {
+  cursor: default;
+}
+
+.submit-btn:focus {
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(50, 151, 211, 0.3) 0 0 0 4px;
 }
 
 .error-msg {

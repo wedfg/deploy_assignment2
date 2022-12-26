@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const Home = () => {
   return (
     <>
       <div className="home">
-        <p style={{fontSize: '40px'}}>Keep all your memories here and show others</p>
+        <p className="pesan">Keep All Your Memories Here and Show Others</p>
       </div>
     </>
   );
