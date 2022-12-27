@@ -10,8 +10,8 @@ const Home = () => {
       <p className="pesan">Frontend Engineering</p>
       <p className="pesan">Di PT Ruang Raya Indonesia</p>
       <div className="gambar">
-        <img src={Picture1} />;
-        <img src={rg} />;
+        <img src={Picture1} alt="" />;
+        <img src={rg} alt="" />;
       </div>
     </>
   );
